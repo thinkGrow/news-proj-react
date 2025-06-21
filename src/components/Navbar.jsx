@@ -5,13 +5,13 @@ import user from "../assets/user.png"
 const Navbar = () => {
   return (
     <div className="flex justify-between items-center">
-      <div className=""></div>
-      <div className="nav flex gap-5 bg-amber-400">
+      <div className="w-1/3"></div>
+      <div className="w-1/3 nav flex gap-5 fjustify-center">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/career">Career</NavLink>
       </div>
-      <div className="flex gap-5">
+      <div className="flex w-1/3 justify-end gap-5">
         <img src={user} alt="" />
         <button className="btn btn-primary px-10">Login</button>
       </div>
