@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import NewsCards from "../components/NewsCards";
 
 // author: {name: 'Shirin Akter', published_date: '2025-04-22T17:00:00.000Z', img: 'https://randomuser.me/api/portraits/women/29.jpg'}
 // category_id: 2
@@ -36,7 +37,16 @@ const CategoryNews = () => {
     }
   }, [data, id]);
 
-  return <div>category - {categoryNews.length} news found</div>;
+  return (
+    <div>
+      <h2 className="font-bold">Total {categoryNews.length}</h2>
+      <div className="grid grid-cols-1 gap-5">
+        {categoryNews.map((news) => (
+          <NewsCards news={news} key={news.id}></NewsCards>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default CategoryNews;
