@@ -20,3 +20,4 @@ const SocialLogin = () => {
 };
 
 export default SocialLogin;
+ 

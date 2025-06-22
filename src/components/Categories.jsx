@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import { NavLink } from "react-router-dom";
 
-const categoryPromise = fetch("./data/categories.json").then((res) =>
+const categoryPromise = fetch("/data/categories.json").then((res) =>
   res.json()
 );
 
@@ -17,7 +17,7 @@ const Categories = () => {
             className="btn bg-base-100 border-0 hover:bg-base-200 font-semibold text-accent"
             to={`/category/${category.id}`}
           >
-            {category.name} 
+            {category.name}   
           </NavLink>
         ))}
       </div>
