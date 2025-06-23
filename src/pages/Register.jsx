@@ -23,7 +23,6 @@ const Register = () => {
     const password = form.password.value;
 
     console.log(name, photo, email, password);
-
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -41,7 +40,7 @@ const Register = () => {
       })
       .catch((error) => {
         // const errorCode = error.code;
-        const errorMessage = error.message;f
+        const errorMessage = error.message;
 
         alert(errorMessage);
       });
